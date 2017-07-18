@@ -6,7 +6,7 @@ NO_DOCKER_CACHE      ?= false
 COMMON_DIR           ?= $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 CONFIG_DIR           ?= $(COMMON_DIR)
 
-HOME_DIR             ?= $(shell echo ~)
+HOME_DIR             ?= /root
 MYIP                 ?= $(shell hostname -i)
 
 XOS_DIR              ?= $(HOME_DIR)/xos
@@ -30,7 +30,7 @@ DOCKER_COMPOSE_YML   ?= $(CONFIG_DIR)/onboarding-docker-compose/docker-compose.y
 
 # git repos
 CORD_BASE_GIT_URL ?= https://gerrit.opencord.org/p
-DEFAULT_BRANCH ?= master
+DEFAULT_BRANCH ?= cord-3.0
 
 XOS_BRANCH ?= $(DEFAULT_BRANCH)
 XOS_GIT_URL ?= $(CORD_BASE_GIT_URL)/xos.git

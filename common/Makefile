@@ -31,7 +31,7 @@ apt-prereqs: deprecation_warning
 	sudo usermod -aG docker $(shell whoami)
 
 /usr/local/bin/docker-compose: | apt-prereqs
-	sudo pip install docker-compose
+	sudo pip install docker-compose==1.09
 
 
 # configuration
